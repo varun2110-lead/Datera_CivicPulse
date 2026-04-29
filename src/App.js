@@ -12,7 +12,7 @@ export default function App() {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [lastUpdated, setLastUpdated] = useState(null);
-  const [toasts, setToasts] = useState([]);
+  const [, setToasts] = useState([]);
   const prevStatusRef = useRef({});
 
   const addToast = useCallback((msg, type = "error") => {
