@@ -1,6 +1,6 @@
 # Progress Log CivicPulse
 
-you can access the website  through the gien link below 
+you can access the website  through the gien link 
 https://civic-pulse-ochre.vercel.app/
 
 
