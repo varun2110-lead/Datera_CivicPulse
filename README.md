@@ -1,119 +1,139 @@
-# Progress Log CivicPulse
+# CivicPulse
 
-## Hackathon Timeline
+A real time monitoring dashboard for India's government websites.
 
-## Update 1 : 3 PM to 5 PM
+CivicPulse acts as a digital watchdog that tracks uptime, performance, and failures across important public platforms. It helps improve transparency and accountability in digital services.
 
-### What we started with
+## Problem
 
-We observed that government websites are important, but when they stop working, users do not know what is happening.
+During everyday use, we noticed that government websites like DigiLocker, UMANG, or eSanjeevani often become slow or unavailable without any clear communication.
 
-There is no transparency, no alerts, and no simple way to report issues.
+There is no visibility into outages  
+No alerts for users  
+No simple way to report issues  
 
-### What we built
+For important services like healthcare or identity systems, this becomes a serious problem.
 
-Set up backend using Node.js and Express  
-Created initial monitoring function  
-Checked basic status and response time  
+## Solution
 
-Built a simple React frontend to display  
-Website name  
-Status  
+CivicPulse provides a simple real time dashboard that
+
+Monitors government websites continuously  
+Measures response time  
+Detects whether a service is UP, DOWN, or SLOW  
+Auto refreshes every 10 seconds  
+Allows users to report issues via email  
+
+## How it works
+
+User opens dashboard  
+Frontend calls backend  
+Backend checks live websites  
+Results are returned and displayed  
+
+## Core monitoring logic
+
+async function checkSite(url) {
+  try {
+    const start = Date.now();
+
+    const res = await axios.get(url, {
+      timeout: 8000,
+      headers: { "User-Agent": "Mozilla/5.0" }
+    });
+
+    const time = Date.now() - start;
+
+    return {
+      status: "UP",
+      time,
+      code: res.status
+    };
+  } catch (err) {
+    return {
+      status: "DOWN",
+      time: null,
+      code: err.response?.status || "NO RESPONSE"
+    };
+  }
+}
+
+We measure
+
 Response time  
+HTTP status  
+Failures like timeouts or no response  
 
-### Outcome
+## Features
 
-Basic working prototype with backend checking websites and frontend displaying results  
+### Monitoring
 
----
+Real time website status tracking  
+Response time measurement  
+UP DOWN SLOW classification  
+Auto refresh every 10 seconds  
 
-## Update 2 : 5 PM to 9 PM
+### Dashboard
 
-### Improvements made
+Dark theme interface  
+Overall health bar  
+Status statistics  
+Mini performance charts  
 
-Added auto refresh every 10 seconds  
-Improved error handling for timeouts and failures  
+### User interaction
 
-### UI updates
+Visit official website directly  
+Search and filter services  
+Report issues via email  
 
-Introduced card based layout  
-Added visual indicators for status  
+### Analytics
 
-### Outcome
+Health score visualization  
+Response insights  
+Service level performance  
 
-System became more stable and usable with real time updates  
+## Tech stack
 
----
+Frontend  
+React using Vite  
 
-## Update 3 : 9 PM to 11 PM
+Backend  
+Node.js  
+Express  
 
-### Features added
+Other tools  
+Axios for HTTP checks  
+CORS  
 
-Visit official website button for each service  
-Report issue feature with email integration  
-Search and filter functionality  
+## How to run
 
-### Dashboard improvements
+Backend
 
-Overall health bar showing system status  
-Service status counts such as UP, DOWN, BLOCKED  
-Improved layout and visual hierarchy  
+cd backend  
+npm install  
+node server.js  
 
-### Monitoring improvements
+Frontend
 
-Added SLOW and BLOCKED states  
-Improved response time tracking  
-Better handling of failed and delayed responses  
-
-### UI enhancements
-
-Modern dark theme  
-Responsive design for mobile and desktop  
-Cleaner and more structured interface  
-
-### Outcome
-
-The system evolved into a complete MVP dashboard with
-
-Real time monitoring  
-User interaction features  
-Clear visualization of system health  
-Improved usability and design  
-
----
-
-## Challenges faced
-
-Handling inconsistent response times  
-Choosing proper timeout values  
-Keeping UI stable during frequent refresh  
-Managing repeated API calls efficiently  
-
----
-
-## Key learnings
-
-Handling failures is critical in monitoring systems  
-Iterative improvements make the product stronger  
-User experience matters even in technical tools  
-
----
+cd client  
+npm install  
+npm run dev  
 
 ## Current state
 
-Backend is monitoring real websites  
+Backend is checking real websites  
 Frontend displays live status  
 Reporting system is working  
-Dashboard is stable and interactive  
+Dashboard updates in real time  
 
----
+## Future improvements
 
+Add history tracking  
+Improve accuracy with retries  
+Add automated alerts  
 
----
+## Why this matters
 
-## Final note
+Even small failures in public digital infrastructure affect many users.
 
-The project improved significantly in each phase, moving from a simple prototype to a functional real time monitoring system.
-
-you can access from the given link below 
-https://civic-pulse-ochre.vercel.app/
+CivicPulse makes these failures visible.
