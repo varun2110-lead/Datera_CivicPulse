@@ -1,74 +1,119 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Progress Log CivicPulse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hackathon Timeline
 
-## Available Scripts
+## Update 1 : 3 PM to 5 PM
 
-In the project directory, you can run:
+### What we started with
 
-### `npm start`
+We observed that government websites are important, but when they stop working, users do not know what is happening.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There is no transparency, no alerts, and no simple way to report issues.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What we built
 
-### `npm test`
+Set up backend using Node.js and Express  
+Created initial monitoring function  
+Checked basic status and response time  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Built a simple React frontend to display  
+Website name  
+Status  
+Response time  
 
-### `npm run build`
+### Outcome
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Basic working prototype with backend checking websites and frontend displaying results  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Update 2 : 5 PM to 9 PM
 
-### `npm run eject`
+### Improvements made
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Added auto refresh every 10 seconds  
+Improved error handling for timeouts and failures  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### UI updates
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Introduced card based layout  
+Added visual indicators for status  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Outcome
 
-## Learn More
+System became more stable and usable with real time updates  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Update 3 : 9 PM to 11 PM
 
-### Code Splitting
+### Features added
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Visit official website button for each service  
+Report issue feature with email integration  
+Search and filter functionality  
 
-### Analyzing the Bundle Size
+### Dashboard improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Overall health bar showing system status  
+Service status counts such as UP, DOWN, BLOCKED  
+Improved layout and visual hierarchy  
 
-### Making a Progressive Web App
+### Monitoring improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Added SLOW and BLOCKED states  
+Improved response time tracking  
+Better handling of failed and delayed responses  
 
-### Advanced Configuration
+### UI enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Modern dark theme  
+Responsive design for mobile and desktop  
+Cleaner and more structured interface  
 
-### Deployment
+### Outcome
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The system evolved into a complete MVP dashboard with
 
-### `npm run build` fails to minify
+Real time monitoring  
+User interaction features  
+Clear visualization of system health  
+Improved usability and design  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# CivicPulse
->>>>>>> 2adf7e197b711175275c93266a26f10f6bec1ec5
+---
+
+## Challenges faced
+
+Handling inconsistent response times  
+Choosing proper timeout values  
+Keeping UI stable during frequent refresh  
+Managing repeated API calls efficiently  
+
+---
+
+## Key learnings
+
+Handling failures is critical in monitoring systems  
+Iterative improvements make the product stronger  
+User experience matters even in technical tools  
+
+---
+
+## Current state
+
+Backend is monitoring real websites  
+Frontend displays live status  
+Reporting system is working  
+Dashboard is stable and interactive  
+
+---
+
+
+---
+
+## Final note
+
+The project improved significantly in each phase, moving from a simple prototype to a functional real time monitoring system.
+
+you can access from the given link below 
+https://civic-pulse-ochre.vercel.app/
